@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#4 HomeWork</title>
+    <script src="app.js" defer></script>
+    <script src="clock.js" defer></script>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Random Number Game</h1>
+
+    <h2 class="js-title">
+        <form>
+            <label>Generate a number 0 and
+                <input type="number" id="maxNumber" min="0">
+            </label>
+        </form>
+    </h2>
+
+    <form id="js-guess">
+        <h3>
+            <label>Guess the number
+                <input type="number" placeholder="chose Number" max="200" min="0">
+                <button>play!</button>
+            </label>
+        </h3>
+    </form>
+
+
+    <div id="js-result">
+        <span></span>
+    </div>
+
+
+    <h2 class="js-clock"></h2>
+</body>
+
+</html>
