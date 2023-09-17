@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,39 +8,62 @@
     <link rel="stylesheet" href="css/style.css">
 
 </head>
+
 <body>
-
-    <!-- input의 유효성 검사를 하기 위해서는 form안에 input이 존재 해야함 -->
-    <form id="login-form" class="hidden">
-        <input
-            required
-            maxlength="15"
-            type="text"
-            placeholder="What is your name?" />
-        <input type="submit" value="Log In" />
-    </form>
-    <h1 id="greeting" class="hidden"></h1>
-
-    <h2 class="today"></h2>
-    <h3 class="clock"></h3>
-    <h3 id="weather">
-        <span></span>
-        <span></span>
-    </h3>
-    <div id="randomImg"></div>
-    <div id="quotes">
-        <span></span>
-        <span></span>
+    <div id="wrap">
+        <div id="info">
+            <div id="login">
+                <form id="login-form" class="hidden">
+                    <!-- input의 유효성 검사를 하기 위해서는 form안에 input이 존재 해야함 -->
+                    <input required maxlength="15" type="text" placeholder="What is your name?" />
+                </form>
+                <h1 id="greeting" class="hidden"></h1>
+            </div>
+            <div id="dayInfo">
+                <h3 id="weather">
+                    <span></span>
+                    <span></span>
+                </h3>
+                <h2 class="today"></h2>
+                <h3 class="clock"></h3>
+            </div>
+        </div>
+        <div id="box">
+            <section id="left">
+                <div class="memory">
+                    <h5>Today’s Memory</h5>
+                    <div id="randomImg"></div>
+                </div>
+                <div class="quote">
+                    <h5>Today’s Quotes</h5>
+                    <div id="quotes">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </section>
+            <section id="mid">
+                <h5>Daily,</h5>
+                <ul id="todo-list">
+                    <!-- li는 js로 추가 -->
+                </ul>
+                <form id="todo-form">
+                    <input type="text" placeholder="Enter new task">
+                </form>
+            </section>
+            <section id="right">
+                <h5>Weekly,</h5>
+                <ul id="todo-list">
+                    <!-- li는 js로 추가 -->
+                </ul>
+                    <form id="todo-form">
+                        <input type="text" placeholder="Enter new task">
+                    </form>
+                
+            </section>
+        </div>
     </div>
 
-    <ul id="todo-list">
-        <!-- li는 js로 추가 -->
-    </ul>
-    <form id="todo-form">
-        <input type="text" placeholder="Enter new task">
-    </form>
-    
-    
     <script>
 
         // 1.
@@ -57,30 +81,30 @@
 
 
         //function onLoginSumit(event) {
-            //console.log("hello", loginInput.value); //value는 input에 입력한 값을 가져옴
+        //console.log("hello", loginInput.value); //value는 input에 입력한 값을 가져옴
 
-            //user name 유효성 검사
-            // 1. 비어있으면 안됨
-            // 2. 너무 긴 name도 안됨
-            // if (username === "") {
-            //     alert("Please write your name ^^");
-            // } else if (username.length > 15) {
-            //     alert("Your name is too long lol");
-            // }
+        //user name 유효성 검사
+        // 1. 비어있으면 안됨
+        // 2. 너무 긴 name도 안됨
+        // if (username === "") {
+        //     alert("Please write your name ^^");
+        // } else if (username.length > 15) {
+        //     alert("Your name is too long lol");
+        // }
 
-            //event.preventDefault(); //브라우저의 기본 동작을 막아줌
-            //loginForm.classList.add(HIDDEN_CLASSNAME);
-            //const username = loginInput.value;
-            //localStorage.setItem("username", username)
-            //console.log(username);
-            //greeting.innerText = "hello " + username; //같은 방법
-            //greeting.innerText = `hello! ${username}`; //같은 방법
-            //greeting.classList.remove(HIDDEN_CLASSNAME)
+        //event.preventDefault(); //브라우저의 기본 동작을 막아줌
+        //loginForm.classList.add(HIDDEN_CLASSNAME);
+        //const username = loginInput.value;
+        //localStorage.setItem("username", username)
+        //console.log(username);
+        //greeting.innerText = "hello " + username; //같은 방법
+        //greeting.innerText = `hello! ${username}`; //같은 방법
+        //greeting.classList.remove(HIDDEN_CLASSNAME)
         //}
 
         //function handleLinkClick(event) {
-            //event.preventDefault();
-            //console.dir(event);
+        //event.preventDefault();
+        //console.dir(event);
         //};
 
         //loginForm.addEventListener("submit", onLoginSumit); //submit event에서 입력값을 받음
@@ -94,9 +118,7 @@
     <script src="js/quotes.js"></script>
     <script src="js/backgruondimg.js"></script>
     <script src="js/todo.js"></script>
-    <script src="js/weather.js"></script>
+    <!-- <script src="js/weather.js"></script> -->
 </body>
+
 </html>
-
-
-

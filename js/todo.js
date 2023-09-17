@@ -1,6 +1,6 @@
-const todoForm = document.getElementById("todo-form");
+const todoForm = document.querySelector("#mid #todo-form");
 const todoInput = todoForm.querySelector("input");
-const todoList = document.getElementById("todo-list");
+const todoList = document.querySelector("#mid #todo-list");
 const TODOS_KEY = "todos" 
 //...Problem2: Problem1은 해결! 하지만 새로 값을 입력하면,
 //.............localStorage에 기존에 남아있던 데이터가 사라지고
@@ -47,7 +47,7 @@ function paintTodo(newTodo) {
     li.id = newTodo.id;
     span.innerText = newTodo.text; //id와 text값 중 text만 받기 
     const button = document.createElement("button");
-    button.innerText = `ㅅ`;
+    button.innerText = ``;
     button.addEventListener("click",deleteTodo)
     li.appendChild(button);
     li.appendChild(span);

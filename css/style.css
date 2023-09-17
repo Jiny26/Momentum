@@ -1,27 +1,47 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
-
+/* common */
 *{padding: 0; margin: 0;}
 button{background: none; border: none;}
 li{list-style: none;}
 .hidden{display: none;}
 img{width: 100%;}
 body {font-family: 'pretendard', sans-serif;}
+:root{
+    --m-col: #221dd8;
+}
+input{
+    border: none;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    box-sizing: border-box;
+}
 #wrap {
     width: 1365px;
-    margin: 100px auto;
-    background-color: rgba(128, 128, 128, 0.466);
+    margin: 70px auto;
 }
-
+/* header */
 #info {
-    height: 270px;
+    height: 200px;
 }
     #login{
         float: left;
     
     }
+        #login form input:first-child{
+            width: 210px;
+            height: 50px;
+            font-size: 20px;
+            border-bottom: 1px solid var(--m-col);
+            background-color: #fff;;
+        }
+        #login form input::placeholder{
+            font-size: 18px;
+        }
         #login #greeting{
-        font-size: 44px;
-        font-weight: 700;       
+        font-size: 40px;
+        font-weight: 700;
+        color: var(--m-col);     
         }
     #dayInfo{
         float: right;
@@ -29,32 +49,136 @@ body {font-family: 'pretendard', sans-serif;}
     }
         #dayInfo #weather {
             margin-bottom: 18px;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 200;
         }
         #dayInfo .today {
             margin-bottom: 10px;
-            font-size: 32px;
+            font-size: 28px;
             font-weight: 600;
         }
         #dayInfo .clock {
-            font-size: 46px;
+            font-size: 42px;
             font-weight: 400;
         }
+/* main */
 #box{
     width: 1280px;
-    height: 600;
+    height: 600px;
     margin: 0 auto;
-    background-color: gray;
     display: flex;
 }
 #box section{
     margin-right: 20px;
+    width: 370px;
+    height: 540px;
 }
-#box section:last-child{
+#box section h5 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 600;
+}
+    section#left{
+        width: 500px;
+    }
+        #randomImg {
+            width: 500px;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+        #quotes{
+            width: 500px;
+            height: 170px;
+            background-color: #fff;
+            border: 1px solid var(--m-col);
+            box-sizing: border-box;
+            border-radius: 10px;
+            padding: 12px;
+            position: relative;
+            overflow: hidden;
+        }
+        #quotes span:first-child{
+            word-break: keep-all;
+            letter-spacing: -1;
+        }
+        #quotes span:last-child{
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            text-align: right;
+            display: block;
+            font-weight: 400;
+            font-size: 14px;
+            background-color: #fff;
+        }
+    section#mid, section#right{
+        position: relative;
+        height: 578px;
+    }
+    section #todo-list{
+        width: 100%;
+        height: 494px;
+        background-color: #eeeeff;
+        border-radius: 10px 10px 0 0;
+        padding: 24px 16px;
+        box-sizing: border-box;
+        overflow: auto;
+    }
+    section #todo-list li{
+        position: relative;
+        padding: 5px;
+        border-bottom: 1px solid #fff;
+    }
+    section #todo-list li button{
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 1px solid var(--m-col);
+    }
+    section #todo-list li span{
+        font-size: 18px;
+        margin-left: 20px;
+    }
+    section #todo-form{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        color: #fff;
+        z-index: 100;
+    }
+    section #todo-form input{
+        width: 100%;
+        height: 50px;
+        border-radius: 0 0 10px 10px;
+        background-color: var(--m-col);
+        color: #eee;
+    }
+    section #todo-form input::placeholder{
+        color: #eee;
+    }
+    
+
+#box section#right{
     margin-right: 0px;
 }
-#randomImg {
-    width: 500px;
-    height: 300px;
-}
+    section#right #todo-list{
+        background-color: #fff;
+        border: 1px solid var(--m-col);
+    }
+    section#right #todo-form input{
+        width: 100%;
+        height: 50px;
+        background-color: #fff;
+        color: var(--m-col);
+        border: 1px solid var(--m-col);
+        box-sizing: border-box;
+        border-top: none;
+    }
+    section#right #todo-form input::placeholder{
+        color: var(--m-col);
+    }
