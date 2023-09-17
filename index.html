@@ -15,7 +15,7 @@
             <div id="login">
                 <form id="login-form" class="hidden">
                     <!-- input의 유효성 검사를 하기 위해서는 form안에 input이 존재 해야함 -->
-                    <input required maxlength="15" type="text" placeholder="What is your name?" />
+                    <input required maxlength="15" type="text" placeholder="What is your name?" id="write"/>
                 </form>
                 <h1 id="greeting" class="hidden"></h1>
             </div>
@@ -31,11 +31,11 @@
         <div id="box">
             <section id="left">
                 <div class="memory">
-                    <h5>Today’s Memory</h5>
+                    <h5>Today's Memory</h5>
                     <div id="randomImg"></div>
                 </div>
                 <div class="quote">
-                    <h5>Today’s Quotes</h5>
+                    <h5>Today's Quotes</h5>
                     <div id="quotes">
                         <span></span>
                         <span></span>
@@ -48,7 +48,7 @@
                     <!-- li는 js로 추가 -->
                 </ul>
                 <form id="todo-form">
-                    <input type="text" placeholder="Enter new task">
+                    <input type="text" placeholder="Enter new task" id="daily_todo">
                 </form>
             </section>
             <section id="right">
@@ -57,7 +57,7 @@
                     <!-- li는 js로 추가 -->
                 </ul>
                     <form id="todo-form">
-                        <input type="text" placeholder="Enter new task">
+                        <input type="text" placeholder="Enter new task" id="weekly_todo">
                     </form>
                 
             </section>
@@ -114,11 +114,12 @@
 
 
     <script src="js/greeting.js"></script>
+    <script src="js/today.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/backgruondimg.js"></script>
     <script src="js/todo.js"></script>
-    <!-- <script src="js/weather.js"></script> -->
+    <script src="js/weather.js"></script>
 </body>
 
 </html>
