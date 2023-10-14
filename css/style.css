@@ -87,6 +87,11 @@ input{
             overflow: hidden;
             border-radius: 10px;
             margin-bottom: 40px;
+            position: relative;
+        }
+        #randomImg img {
+            position: absolute;
+            transform: translateY(-25%);
         }
         #quotes{
             width: 500px;
